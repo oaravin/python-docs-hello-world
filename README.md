@@ -1,19 +1,21 @@
----
-page_type: sample
-description: "A minimal sample app that can be used to demonstrate deploying Flask apps to Azure App Service on Linux."
-languages:
-- python
-products:
-- azure
-- azure-app-service
----
-
 # Python Flask sample for Azure App Service (Linux)
 
-This is a minimal Flask app that can be deployed to Azure App Service on Linux.
+This is a sample Flask app that demonstrates a few features of the framework.
 
-For instructions on running and deploying the code, see [Quickstart: Create a Python app in Azure App Service on Linux](https://docs.microsoft.com/azure/app-service/quickstart-python).
+## Running the app
 
-## Contributing
+1. Install the dependencies:
+   ```bash
+   pip install -r requirements.txt
+   ```
 
-This project has adopted the [Microsoft Open Source Code of Conduct](https://opensource.microsoft.com/codeofconduct/). For more information see the [Code of Conduct FAQ](https://opensource.microsoft.com/codeofconduct/faq/) or contact [opencode@microsoft.com](mailto:opencode@microsoft.com) with any additional questions or comments.
+2. Run the app:
+   ```bash
+   flask run
+   ```
+
+## Endpoints
+
+* `/`: Returns a simple HTML page.
+* `/<name>`: Returns a personalized greeting. For example, `/world` will return "Hello, world!".
+* `/json`: Returns a JSON response.
